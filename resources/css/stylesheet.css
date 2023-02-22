@@ -1,0 +1,578 @@
+/* ------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    padding: 15px 15px 0 15px;
+    color: #777;
+}
+
+/* ------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------ */
+
+th, td {
+    width: 50px;
+    text-align: center;
+    background-color: #fff;
+    padding: 0 20px
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* HEADINGS */
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 160%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+    
+}
+
+/* BUTTONS */
+
+.btn:link, 
+.btn:visited {
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    font-size: 80%;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #fff;
+    border-radius: 200px;
+    border: 1px solid #fff;
+    color: #000;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #fff;
+    border-radius: 200px;
+    border: 1px solid #fff;
+    color: #000;
+}
+
+.btn-full:hover{
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-full:active{
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #fff;
+    color: #000;
+}
+
+.btn-ghost:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-ghost:active {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* ------------------------------ */
+/* HEADER */
+/* ------------------------------ */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/background-drinks.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header--home {
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header--download {
+    height: 97vh;
+    background-color: #f4f4f4;
+}
+
+.logo-text {
+    margin-top: 60px;
+    margin-left: 10px;
+    line-height: normal;
+    color: #fff;
+    width: auto;
+    float: left;
+    font-size: 110%;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-box-download {
+    position: absolute;
+    text-align: center;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-box-contact {
+    position: absolute;
+    text-align: center;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-box-sitemap {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+}
+
+label, input {
+    margin-bottom: 30px;
+}
+
+
+.logo {
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: 35px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 60px;
+    font-size: 85%;
+    margin-right:30px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+.main-nav li a:active {
+    color: #e67e22;
+    border-bottom: 2px solid #e67e22;
+}
+
+.active {
+    border-bottom: 2px solid #e67e22 !important;
+}
+
+.section-about {
+    background-color: #fff;
+    padding: 250px 0;
+    margin-top: -20vh;
+    margin-bottom: -25vh;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 80px;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.u-section-about-header {
+    text-transform: uppercase;
+    font-size: 140%;
+    color: #000;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.u-section-about-header::after {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    content: " ";
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+
+.u-margin-bottopxm-small {
+    margin-bottom: 15px !important;
+}
+
+.heading-tertiary {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.heading-margin {
+    margin-top: 25px;
+}
+
+.paragraph:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - 60px) / 2);
+}
+
+.row [class^="col-"]:not(:last-child) {
+    margin-right: 60px;
+}
+
+.row .col-1-of-4 {
+    width: calc((100% - 3 * 60px) / 4);
+}
+
+.row [class^="col-"] {
+    float: left;
+}
+
+.feature-box__icon {
+    font-size: 60px;
+    margin-bottom: 5px;
+    display: inline-block;
+    background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.btn-text:link, .btn-text:visited {
+    font-size: 16px;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    font-weight: 600;
+}
+
+.map-spacer {
+    padding-left: 40px;
+}
+
+.map, .map > li > a, .map-spacer > li > a:link, .map-spacer > li > a:visited {
+    color: #fff;
+}
+
+.btn-text:hover,
+.btn-text:active{
+    border-bottom: 2px solid #d35400;
+    color: #d35400;
+}
+
+.discount-image {
+    position: relative;
+    height: 350px;
+    width: auto;
+    display: inline-block;
+    float: left;
+}
+
+.box-image {
+    position: relative;
+    top: -140px;
+}
+
+
+/* ------------------------------ */
+/* DRINKS GALLERY */
+/* ------------------------------ */
+
+.section-drinks-gallery {
+    padding: 25px 0 8px 0;
+    background-color: #0B0B09;
+}
+
+.drinks-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.drinks-showcase li {
+    display: block;
+    float: left;
+    width: 33.33%;
+}
+
+.drink-photo {
+    width: 60%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    margin-left: 10%;
+}
+
+.drink-photo img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.05);
+    transition: transform 0.5s, opacity 0.5s;
+    
+}
+
+.drink-photo img:hover {
+    transform: scale(1.17);
+}
+
+/* ------------------------------ */
+/* STEPS SECTION */
+/* ------------------------------ */
+
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+.section-steps h2 {
+    padding-top: 100px;
+    font-size: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.section-steps h2::after {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    content: " ";
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+.steps-box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.work-step {
+    margin-bottom: 50px;
+}
+
+.work-step div {
+    color: #000;
+    font-size: 150%;
+    height: 54px;
+    width: 54px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 25px;
+    float: left;
+    line-height: normal;
+    padding: 5px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 200px;
+}
+
+.work-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.btn-app:link, .btn-app:visited {
+    border: 0;
+}
+
+a:hover, a:visited {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* ------------------------------ */
+/* PARTNERED COLLEGES */
+/* ------------------------------ */
+
+.section-partner-colleges h2 {
+    margin-top: 80px;
+    text-align: center;
+    color: #000;
+    font-size: 150%;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.section-partner-colleges h2:after {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    content: " ";
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.partner-box {
+    padding: 1%;
+    text-align: center;
+}
+
+.partner-box img {
+}
+
+.ucc-logo {
+    width: 140px;
+    height: auto;
+}
+
+.partner-box h3 {
+    color: #000;
+}
+
+footer {
+    margin-top: 60px;
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav li, .social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
